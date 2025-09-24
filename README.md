@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+# Four-Frame 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful, modern movie discovery web application with a feminine design aesthetic. Browse trending movies, search for your favorites, and watch trailers in an elegant modal interface.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Movie Discovery**: Browse trending movies and TV shows
+- **Search Functionality**: Find movies by title with real-time search
+- **Category Filtering**: Filter by movies, TV shows, and animation
+- **Trailer Viewing**: Watch YouTube trailers in beautiful modals
+- **User Authentication**: Secure login and registration system
+- **Profile Management**: Update email and profile pictures
+- **Responsive Design**: Works perfectly on desktop and mobile
+- **Modern UI**: Glassmorphism design with pink/purple gradients
 
-### `npm start`
+## 🎨 Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Glassmorphism Effects**: Frosted glass UI elements with backdrop blur
+- **Gradient Backgrounds**: Beautiful pink and purple color schemes
+- **Smooth Animations**: Hover effects and transitions throughout
+- **Movie-Themed**: Cinema backgrounds and movie camera icons
+- **Typography**: Elegant Playfair Display and Inter font combination
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+### Frontend
+- **React 19** - Modern React with hooks
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API requests
+- **Formik & Yup** - Form handling and validation
+- **CSS3** - Advanced styling with gradients and animations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### APIs
+- **TMDB API** - Movie data and trailers
+- **Custom Backend** - User authentication and profiles
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
+- TMDB API key
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/four-frame.git
+cd four-frame
+```
 
-### `npm run eject`
+2. Install dependencies:
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Set up environment variables:
+```bash
+# Create .env file (optional - TMDB key is included)
+REACT_APP_TMDB_API_KEY=your_tmdb_api_key_here
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📱 Usage
 
-## Learn More
+1. **Browse Movies**: Click "Trending" to see popular movies
+2. **Search**: Use the search bar to find specific movies
+3. **Filter**: Use category buttons to filter by type
+4. **Watch Trailers**: Click any movie card to open trailer modal
+5. **Register/Login**: Create an account to access profile features
+6. **Profile**: Update your email and profile picture
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎯 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+four-frame/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── MovieCard.jsx
+│   │   ├── MovieContainer.jsx
+│   │   ├── MovieDetail.jsx
+│   │   └── SearchBar.jsx
+│   ├── App.jsx
+│   ├── style.css
+│   └── index.js
+├── package.json
+└── README.md
+```
 
-### Code Splitting
+## 🔧 Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend Integration
+The app expects a backend API running on port 9000 with these endpoints:
+- `POST /api/register` - User registration
+- `POST /api/login` - User authentication
+- `GET /api/profile` - Get user profile
+- `PUT /api/profile` - Update user profile
 
-### Analyzing the Bundle Size
+### TMDB API
+Get your free API key from [The Movie Database](https://www.themoviedb.org/settings/api)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🎨 Customization
 
-### Making a Progressive Web App
+### Colors
+Main color scheme defined in `style.css`:
+- Primary: `#ff9a9e` (Pink)
+- Secondary: `#fecfef` (Light Pink)
+- Accent: `#667eea` (Purple)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Fonts
+- Headers: Playfair Display (serif)
+- Body: Inter (sans-serif)
 
-### Advanced Configuration
+## 📦 Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create a production build:
+```bash
+npm run build
+```
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### `npm run build` fails to minify
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License 
+
+## 👨‍💻 Author
+
+**Kibor Kisabit**
+
+## 🙏 Acknowledgments
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) for movie data
+- [Unsplash](https://unsplash.com/) for background images
+- [Google Fonts](https://fonts.google.com/) for typography
+- React community for excellent documentation
+
+---
+
+Made with 💜 by Kibor Kisabit# Four-Frame
