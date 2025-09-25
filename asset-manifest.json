@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Four-Frame/static/css/main.e25605dd.css",
+    "main.js": "/Four-Frame/static/js/main.5386f452.js",
+    "static/js/453.17c051c4.chunk.js": "/Four-Frame/static/js/453.17c051c4.chunk.js",
+    "index.html": "/Four-Frame/index.html",
+    "main.e25605dd.css.map": "/Four-Frame/static/css/main.e25605dd.css.map",
+    "main.5386f452.js.map": "/Four-Frame/static/js/main.5386f452.js.map",
+    "453.17c051c4.chunk.js.map": "/Four-Frame/static/js/453.17c051c4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e25605dd.css",
+    "static/js/main.5386f452.js"
+  ]
+}
