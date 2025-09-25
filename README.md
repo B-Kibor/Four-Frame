@@ -1,5 +1,9 @@
 # Four-Frame 🎬
 
+**🌐 Live Demo:** [https://B-Kibor.github.io/Four-Frame](https://B-Kibor.github.io/Four-Frame)
+
+**🔧 Backend Repository:** [https://github.com/B-Kibor/Four-Frame-Backend](https://github.com/B-Kibor/Four-Frame-Backend)
+
 A beautiful, modern movie discovery web application with a feminine design aesthetic. Browse trending movies, search for your favorites, and watch trailers in an elegant modal interface.
 
 ## ✨ Features
