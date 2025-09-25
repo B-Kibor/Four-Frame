@@ -12,6 +12,7 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showBucketList, setShowBucketList] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const apiUrl = process.env.REACT_APP_API_URL;
 
   
@@ -27,13 +28,16 @@ const Home = () => {
 
   const fetchTrending = async () => {
     try {
-      setShowBucketList(false); // Clear bucket list view
+      setIsLoading(true);
+      setShowBucketList(false);
+      setError("");
       const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
       const data = await res.json();
       setMovies(data.results);
-      setError("");
     } catch {
       setError("Failed to load trending movies.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -199,7 +203,7 @@ const Home = () => {
 
 
 
-      {movies.length === 0 && !error && !showBucketList && (
+      {movies.length === 0 && !error && !showBucketList && !isLoading && (
         <div className="landing-message">
           <h2>Welcome to Four-Frame</h2>
           <p className="welcome-subtitle">Your Ultimate Movie Discovery Experience</p>
