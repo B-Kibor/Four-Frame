@@ -1,7 +1,9 @@
 import React from 'react';
 
-const CategoryButtons = ({ onCategoryClick, onTrendingClick }) => (
+const CategoryButtons = ({ onCategoryClick, onTrendingClick, onHomeClick }) => (
   <div className="category-buttons">
+
+    <button onClick={onHomeClick}>Home</button>
 
     <button onClick={onTrendingClick}>Trending</button>
 

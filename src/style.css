@@ -322,12 +322,36 @@ header h1 {
 
 /* Movie container */
 #movie-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 20px;
   padding: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+}
+
+#movie-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+#movie-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+#movie-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  border-radius: 10px;
+}
+
+#movie-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%);
+}
+
+#movie-container .movie-card {
+  min-width: 220px;
+  max-width: 220px;
+  flex-shrink: 0;
 }
 
 /* Movie cards */
@@ -623,6 +647,108 @@ header h1 {
   border: none;
 }
 
+/* Bucket List Button */
+.bucket-list-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bucket-list-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.bucket-list-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Bucket List Header Button */
+.bucket-list-header-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bucket-list-header-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Remove from Bucket List Button */
+.remove-bucket-btn {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+}
+
+.remove-bucket-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+/* Horizontal Bucket List Layout */
+.bucket-list-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 2rem;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+}
+
+.bucket-list-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bucket-list-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.bucket-list-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  border-radius: 10px;
+}
+
+.bucket-list-container::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%);
+}
+
+.bucket-list-container .movie-card {
+  min-width: 220px;
+  max-width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /* Profile */
 .profile-container {
   max-width: 500px;
@@ -739,4 +865,88 @@ header h1 {
   .trailer-container iframe {
     height: 250px;
   }
+  
+  .landing-message h2 {
+    font-size: 2.2rem;
+  }
+  
+  .welcome-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .feature-item {
+    max-width: 280px;
+  }
+}
+
+/* Welcome Message Styling */
+.landing-message {
+  text-align: center;
+  color: white;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-message h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.welcome-features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 154, 158, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.welcome-cta {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+  font-style: italic;
 }

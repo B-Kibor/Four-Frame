@@ -22,16 +22,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1 className="navbar-title">
-        <span className="material-symbols-outlined">Home :</span>
-        FOURFRAME
-      </h1>
-
       <div className="navbar-links">
         {!token ? (
           <>
             <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            <Link to="/register">Sign Up</Link>
           </>
         ) : (
           <div className="navbar-user">

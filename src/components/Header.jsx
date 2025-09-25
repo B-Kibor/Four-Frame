@@ -7,7 +7,9 @@ const Header = ({
   onSearchChange,
   onSearch,
   onCategoryClick,
-  onTrendingClick
+  onTrendingClick,
+  onBucketListClick,
+  onHomeClick
 }) => (
   <header className="header-container">
     <h1 className="header-title">🎬 FOURFRAME 🎥🔥</h1>
@@ -21,7 +23,17 @@ const Header = ({
     <CategoryButtons
       onCategoryClick={onCategoryClick}
       onTrendingClick={onTrendingClick}
+      onHomeClick={onHomeClick}
     />
+    
+    <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+      <button 
+        className="bucket-list-header-btn"
+        onClick={onBucketListClick}
+      >
+        My Bucket List
+      </button>
+    </div>
   </header>
 );
 
